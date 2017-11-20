@@ -67,7 +67,7 @@ public class DenunciasAdapter extends RecyclerView.Adapter<DenunciasAdapter.View
 
         holder.titulo.setText(denuncia.getTitulo());
         holder.ubicacion.setText(denuncia.getUbicacion());
-        holder.usuario.setText(denuncia.getUsername());
+        holder.usuario.setText("Por: " + denuncia.getUsername());
         Log.d("username", "Usuario: " + denuncia.getUsername());
 
         String url = ApiService.API_BASE_URL + "/images/denuncias/" + denuncia.getImagen();
