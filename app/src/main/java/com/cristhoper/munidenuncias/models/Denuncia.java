@@ -4,9 +4,10 @@ package com.cristhoper.munidenuncias.models;
  * Created by Cris on 15/11/2017.
  */
 
+//Los nombres de la clase deben ser los mismos que los campos que le están llegando
 public class Denuncia {
     private int id;
-    private int usuario_id;
+    private String username;
     private String titulo;
     private String descripcion;
     private String imagen;
@@ -20,12 +21,12 @@ public class Denuncia {
         this.id = id;
     }
 
-    public int getUsuario_id() {
-        return usuario_id;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUsuario_id(int usuario_id) {
-        this.usuario_id = usuario_id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getTitulo() {
@@ -64,7 +65,7 @@ public class Denuncia {
     public String toString() {
         return "Denuncia{" +
                 "id=" + id +
-                ", usuario_id=" + usuario_id +
+                ", username=" + username +
                 ", titulo='" + titulo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", imagen='" + imagen + '\'' +

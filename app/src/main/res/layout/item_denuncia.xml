@@ -36,12 +36,22 @@
             android:text="Título de denuncia"/>
 
         <TextView
-            android:id="@+id/tvUbicacion"
+            android:id="@+id/tv_item_Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@+id/menu_button"
             android:layout_toEndOf="@+id/imgDenuncia"
             android:layout_below="@+id/tvTitulo"
+            android:textSize="16sp"
+            android:text="Por cristhoper23"/>
+
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/menu_button"
+            android:layout_toEndOf="@+id/imgDenuncia"
+            android:layout_below="@+id/tv_item_Username"
             android:layout_marginTop="10dp"
             android:textSize="16sp"
             android:text="Ubicación"/>

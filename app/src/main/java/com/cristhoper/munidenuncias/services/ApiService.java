@@ -24,6 +24,9 @@ public interface ApiService {
 
     String API_BASE_URL = "https://muni-denuncias-cristhoper23.c9users.io";
 
+    @GET("api/v1/denuncias")
+    Call<List<Denuncia>> getAllDenuncias();
+
     @GET("api/v1/denuncias_usuario/{usuario_id}")
     Call<List<Denuncia>> getDenuncias(@Path("usuario_id") int usuario_id);
 

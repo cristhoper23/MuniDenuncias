@@ -86,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
-
+                Log.e(TAG, "onFailure: " + t.toString());
+                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -47,7 +47,8 @@ public class DashboardActivity extends AppCompatActivity {
 
         usuario_id = this.getIntent().getExtras().getInt("usuario_id");
 
-        Call<List<Denuncia>> call = service.getDenuncias(usuario_id);
+        Call<List<Denuncia>> call = service.getAllDenuncias();
+        //Call<List<Denuncia>> call = service.getDenuncias(usuario_id);
 
         call.enqueue(new Callback<List<Denuncia>>() {
             @Override
@@ -63,7 +64,7 @@ public class DashboardActivity extends AppCompatActivity {
                         Log.d(TAG, "denuncias: " + denuncias);
 
                         DenunciasAdapter adapter = (DenunciasAdapter) denunciasList.getAdapter();
-                        adapter.setProductos(denuncias);
+                        adapter.setDenuncias(denuncias);
                         adapter.notifyDataSetChanged();
 
                     } else {
